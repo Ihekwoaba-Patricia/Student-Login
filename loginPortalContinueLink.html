@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration|University of Lagos|Student Portal</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia|Audiowide">
+    <script src="https://kit.fontawesome.com/f567a8bfa0.js" crossorigin="anonymous"></script>
+ 
+    <style>
+        
+        * {
+    margin: 0;      
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+body {
+   color: white;
+}
+
+section {
+    background-image: url( "https://img.freepik.com/premium-vector/glowing-geometric-shapes-dark-space-background_205544-43836.jpg?semt=ais_hybrid"); 
+    background-size: cover;
+
+}
+
+h2 {
+    font-size: 1.8rem;
+    animation-name: login;
+    font-family: 'Audiowide', Courier, monospace;
+    text-shadow: 2px 2px 5px rgb(140, 207, 238);
+    animation-name: headSlide;
+    animation-duration: 3s;
+    -webkit-animation-name: headSlide;
+    -webkit-animation-duration: 3s;
+    -moz-animation-name: headSlide;
+    -moz-animation-duration: 3s;
+}
+
+ @keyframes headSlide {
+    0%{
+        opacity: 0;
+        transform: translate(0, -100%, 0);
+    }
+
+    100%{
+        opacity: 1;
+        transform: none;
+    }
+ } 
+
+ .fa-circle-user {
+    animation: userIcon 2s ease-in-out infinite;
+    -webkit-animation: userIcon 2s ease-in-out infinite;
+    -moz-animation:  userIcon 2s ease-in-out infinite;
+ }
+
+ @keyframes userIcon {
+    from {
+        transform: rotateY(150deg);
+    }
+
+    to {
+        transform: rotateY(0deg);
+    }
+}
+
+.loginForm {
+    margin: 2rem 2rem;
+  }
+  
+  
+  .loginForm input {
+      width: 95%;
+      padding: 0.8rem 3rem;
+      margin:0.5rem 0;
+      box-sizing: border-box;
+      border: 1px solid white;
+      border-radius: 15px 50px 30px 5px; 
+      background-color: transparent; 
+      color: white; 
+      /* background-color: rgba(245, 245, 245, 0.985); */
+  }
+
+   .loginForm input:focus {
+    outline: none;
+    color: #fff;
+  } 
+  
+  ::placeholder {
+      font-size: 1rem;
+      color: #fff;
+  }
+  
+  .email, .regPassword, .regPassword2 {
+    display: flex;
+    position: relative;
+  }
+
+  .email span, .regPassword span, .regPassword2 span {
+    position: absolute;
+    top: 1.3rem;
+    left: 1rem;
+  }
+  
+   .loginLink a:link  {
+      text-decoration: none;
+      font-size: 1.1rem;
+      color: #fff;
+  }
+  
+   .loginLink a:hover {
+      color: rgb(230, 230, 238);
+      font-weight: bolder;
+  }
+  
+ .loginLink a:visited {
+      color: #fff;
+  }
+  
+  .submitBtn {
+        margin: 2rem 2rem;
+        text-align: center;
+        animation-name: runSlide;
+        -moz-animation-name: runSlide;
+        -webkit-animation-name:runSlide ;
+        -moz-animation-duration: 2s;
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s; 
+    }
+
+    @keyframes runSlide {
+    from {
+         translate: 50vw 0;
+         scale: 150% 1;
+     }
+     to {
+         translate: 0 0;
+         scale: 100% 1;
+     }
+ }
+
+@-webkit-keyframes runSlide {
+    from {
+        translate: 50vw 0;
+        scale: 150% 1;
+    }
+    to {
+        translate: 0 0;
+        scale: 100% 1;
+    }
+ }
+
+@-moz-keyframes runSlide {
+    from {
+        translate: 50vw 0;
+        scale: 150% 1;
+    }
+    to {
+        translate: 0 0;
+        scale: 100% 1;
+    }
+}
+  
+  .submitBtn button {
+      width: 50%;
+      padding: 0.3rem ;
+      border-radius: 5px;
+      font-size: 1.3rem;
+      font-family: 'Sofia', Courier, monospace;
+      color: whitesmoke;
+      font-weight: bolder;
+      border-radius: 15px 50px 30px;
+      border: none;
+      cursor: pointer;
+      background: linear-gradient(to right, whitesmoke, rgb(45, 43, 165), whitesmoke);
+      transition: ease-out 0.3s;
+      position: relative;
+      z-index: 1;
+    }
+
+  .submitBtn button:hover {
+    color: navy;
+  }
+
+  .submitBtn button:before{
+    transition: 0.3s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: #fff;
+}
+
+.submitBtn button:hover:before{
+    transition: 0.3s all ease;
+    left:0;
+    right:0;
+    opacity: 1;
+    z-index: -1;
+    border-radius: 15px 50px 30px;
+}
+
+  .loginLink {
+    font-size: 1.2rem;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: bolder;
+  }
+
+  .loginLink a {
+    border: none;
+    background-color:rgba(0, 0, 128, 0.421);
+    padding: 0.5rem 1rem;
+    font-family: 'Audiowide', Courier, monospace;
+    border-radius: 15px 50px 30px;
+  }
+
+
+  @media screen and (max-width:700px) {
+
+    section {
+        background-image: url("https://www.shutterstock.com/image-photo/abstract-blue-wall-cobalt-color-600nw-1949901757.jpg");
+    }
+
+    .logoImage{
+        display: none;
+    }
+
+    .loginContainer {
+        max-width:100%;
+        margin: 4rem 2rem
+    }
+
+    h2 {
+        margin-top: 2rem;
+       text-align: center;   
+    }
+
+    .loginLink a {
+        display: block;
+        background-color: #199fe8;
+        width: 50%;
+      margin: 0.5rem auto;
+    }
+
+}
+
+@media screen and (min-width:701px) {
+    section{
+    display: flex;
+    max-width: 70%;
+    margin: 8rem auto;
+    box-shadow: 5px 2px 8px 10px rgba(211, 213, 215, 0.725),  15px 15px 15px 10px rgba(211, 213, 215, 0.725);
+    
+}
+
+h2 {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.logoDiv {
+    width: 50%;
+    background-color: transparent;
+    text-align: center;
+}
+
+.logoImage {
+    width: 40%;
+    height: 50%;
+    border-radius: 60%;
+    margin-top: 6rem;
+    animation: logo 5s linear ;
+    -webkit-animation: logo 5s linear ;
+    -moz-animation: logo 5s linear ;
+}
+
+@keyframes logo {
+    from {
+        transform: rotateY(150deg);
+    }
+
+    to {
+        transform: rotateY(0deg);
+    }
+}
+
+.loginDiv{
+    width:50% ;
+    background-color:transparent;
+}
+
+}
+
+
+    </style> 
+    
+
+</head>
+<body >
+    
+    <section >
+        <article class="logoDiv">
+            <img class="logoImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6-jdKrGYcsw5oBF-gP34yKaiFj8M6xTm5KA&s" alt="logo">
+        </article>
+
+        <article class="loginDiv">
+            <div class="loginContainer">
+                <h2>REGISTER <i class="fa-solid fa-circle-user"></i> </h2>
+    
+                <div>
+                    <form action="" class="loginForm">
+                        <div class="email">
+                            <span><i class="fa-solid fa-envelope"></i></span>
+                            <input class="email" type="email" name="regEmail" id="regEmail" placeholder="GOOGLE E~MAIL" required> <br> <br>
+                        </div>
+
+                        <div class="regPassword">
+                            <span><i class="fa-solid fa-lock"></i></span>
+                            <input class="regPassword" type="password" name="regPassword" id="regPassword" placeholder="NEW PASSWORD*****" required> <br> <br>
+                        </div>
+
+                        <div class="regPassword2">
+                            <span><i class="fa-solid fa-lock"></i></span>
+                            <input class="regPassword2" type="password" name="regPassword2" id="regPassword2" placeholder="CONFIRM PASSWORD****" required> <br> <br>
+                        </div>
+                    </form>
+                </div>
+    
+    
+                <div class="submitBtn" >
+                    <button> Submit</button>
+                </div>
+
+                <div class="loginLink">
+                    <p>Already have an account? <a href="loginPortal.html">lOGIN </a></p>
+                </div>
+               
+          
+    
+            </div>
+        </article>
+       
+    </section>
+    
+</body>
+</html>

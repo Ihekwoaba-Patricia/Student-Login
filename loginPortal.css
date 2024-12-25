@@ -1,0 +1,301 @@
+* {
+    margin: 0;      
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+body {
+   color: white;
+   font-weight:bolder ;
+}
+
+section {
+    background-image: url( "https://img.freepik.com/premium-vector/glowing-geometric-shapes-dark-space-background_205544-43836.jpg?semt=ais_hybrid"); 
+    background-size: cover;
+}
+
+h2 {
+    font-size: 1.8rem;
+    animation-name: login;
+    font-family: 'Audiowide', Courier, monospace;
+    text-shadow: 2px 2px 5px rgb(140, 207, 238);
+    animation-name: headSlide;
+    animation-duration: 3s;
+    -webkit-animation-name: headSlide;
+    -webkit-animation-duration: 3s;
+    -moz-animation-name: headSlide;
+    -moz-animation-duration: 3s;
+}
+
+ @keyframes headSlide {
+    0%{
+        opacity: 0;
+        transform: translate(0, -100%, 0);
+    }
+
+    100%{
+        opacity: 1;
+        transform: none;
+    }
+ } 
+
+ .fa-circle-user {
+    animation: userIcon 2s ease-in-out infinite;
+    -webkit-animation: userIcon 2s ease-in-out infinite;
+    -moz-animation:  userIcon 2s ease-in-out infinite;
+ }
+
+ @keyframes userIcon {
+    from {
+        transform: rotateY(150deg);
+    }
+
+    to {
+        transform: rotateY(0deg);
+    }
+}
+
+.loginForm {
+    margin: 2rem 2rem;
+  }
+  
+  
+  .loginForm input {
+      width: 95%;
+      padding: 0.8rem 3rem;
+      margin:0.5rem 0;
+      box-sizing: border-box;
+      border: 1px solid white;
+      border-radius: 15px 50px 30px 5px; 
+      background-color: transparent; 
+      color: white; 
+      /* background-color: rgba(245, 245, 245, 0.985); */
+  }
+
+   .loginForm input:focus {
+    outline: none;
+    color: #fff;
+  } 
+  
+  ::placeholder {
+      font-size: 1rem;
+      color: #fff;
+  }
+  
+  .inputUser,  .inputPwd {
+    display: flex;
+    position: relative;
+  }
+
+  .inputUser span, .inputPwd span {
+    position: absolute;
+    top: 1.3rem;
+    left: 1rem;
+  }
+
+  .rememberMe {
+    margin-left: 2rem;
+  }
+
+  .forgetPassword {
+      text-align: right;
+      margin-right: 3rem;
+  }
+  
+  .forgetPassword a:link,  .register a:link  {
+      text-decoration: none;
+      font-size: 1.1rem;
+      color: #fff;
+  }
+  
+  .forgetPassword a:hover,  .register a:hover {
+      color: rgb(230, 230, 238);
+      font-weight: bolder;
+  }
+  
+  .forgetPassword a:visited,  .register p a:visited {
+      color: #fff;
+  }
+  
+  .signInButton {
+        margin: 2rem 2rem;
+        text-align: center;
+        animation-name: runSlide;
+        -moz-animation-name: runSlide;
+        -webkit-animation-name:runSlide ;
+        -moz-animation-duration: 2s;
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s;
+    
+       
+    }
+
+    
+@keyframes runSlide {
+    from {
+         translate: 50vw 0;
+         scale: 150% 1;
+     }
+     to {
+         translate: 0 0;
+         scale: 100% 1;
+     }
+ }
+
+@-webkit-keyframes runSlide {
+    from {
+        translate: 50vw 0;
+        scale: 150% 1;
+    }
+    to {
+        translate: 0 0;
+        scale: 100% 1;
+    }
+ }
+
+@-moz-keyframes runSlide {
+    from {
+        translate: 50vw 0;
+        scale: 150% 1;
+    }
+    to {
+        translate: 0 0;
+        scale: 100% 1;
+    }
+}
+  
+  .signInButton button {
+      width: 50%;
+      padding: 0.3rem ;
+      border-radius: 5px;
+      font-size: 1.3rem;
+      font-family: 'Sofia', Courier, monospace;
+      color: whitesmoke;
+      font-weight: bolder;
+      border-radius: 15px 50px 30px;
+      border: none;
+      cursor: pointer;
+      background: linear-gradient(to right, whitesmoke, rgb(45, 43, 165), whitesmoke);
+      transition: ease-out 0.3s;
+      position: relative;
+      z-index: 1;
+    }
+
+  .signInButton button:hover {
+    color: navy;
+  }
+
+  .signInButton button:before{
+    transition: 0.3s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: #fff;
+}
+
+.signInButton button:hover:before{
+    transition: 0.3s all ease;
+    left:0;
+    right:0;
+    opacity: 1;
+    z-index: -1;
+    border-radius: 15px 50px 30px;
+}
+
+  .register {
+    font-size: 1.2rem;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: bolder;
+  }
+
+
+  .register a {
+    border: none;
+    background-color:rgba(0, 0, 128, 0.421);
+    padding: 0.5rem 1rem;
+    font-family: 'Audiowide', Courier, monospace;
+    border-radius: 15px 50px 30px;
+  }
+
+
+  @media screen and (max-width:700px) {
+
+    section {
+        background-image: url("https://www.shutterstock.com/image-photo/abstract-blue-wall-cobalt-color-600nw-1949901757.jpg");
+    }
+
+    .logoImage{
+        display: none;
+    }
+
+    .loginContainer {
+        max-width:100%;
+        margin: 4rem 2rem
+    }
+
+    h2 {
+        margin-top: 2rem;
+       text-align: center;   
+    }
+
+    .register a {
+        display: block;
+        background-color: #199fe8;
+        width: 50%;
+      margin: 0.5rem auto;
+    }
+
+}
+
+@media screen and (min-width:701px) {
+    section{
+    display: flex;
+    max-width: 70%;
+    margin: 8rem auto;
+    box-shadow: 5px 2px 8px 10px rgba(211, 213, 215, 0.725),  15px 15px 15px 10px rgba(211, 213, 215, 0.725);
+    
+}
+
+h2 {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.logoDiv {
+    width: 50%;
+    background-color: transparent;
+    text-align: center;
+}
+
+.logoImage {
+    width: 40%;
+    height: 50%;
+    border-radius: 60%;
+    margin-top: 6rem;
+    animation: logo 5s linear ;
+    -webkit-animation: logo 5s linear ;
+    -moz-animation: logo 5s linear ;
+}
+
+@keyframes logo {
+    from {
+        transform: rotateY(150deg);
+    }
+
+    to {
+        transform: rotateY(0deg);
+    }
+}
+
+.loginDiv{
+    width:50% ;
+    background-color:transparent;
+}
+
+}
